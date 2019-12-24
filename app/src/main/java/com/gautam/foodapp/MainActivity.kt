@@ -52,6 +52,9 @@ class MainActivity : AppCompatActivity() {
 
             foodview.imViewTicket.setOnClickListener({
                 val FDIntent = Intent(context,FoodDetails::class.java)
+                FDIntent.putExtra("name",food.name!!)
+                FDIntent.putExtra("img",food.img!!)
+                FDIntent.putExtra("desc",food.desc!!)
                 context!!.startActivity(FDIntent)
             })
 
